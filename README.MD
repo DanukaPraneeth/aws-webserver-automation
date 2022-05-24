@@ -11,15 +11,19 @@ aws_access_key_id = XXXXXXXXXXX
 aws_secret_access_key = XXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-2. Terraform (from 0.13 onwards)
+2. Based on the profile name you give in the above file, update the providers.tf file in the repo with the correct profile name
+3. Terraform (from 0.13 onwards)
+
 
 ## How to run:
 1. Clone the repo and go inside the downloaded repo
 2. Check the vars.tf and update any of the required variable files
 3. Default index.html file for the web server is availble in the folder called 'uploads'. If you need to change your default web page, update the html file inside this folder
 4. Run the terraform script using below commands,
+```
 	terraform init
 	terraform apply
+```
 
 5. At the end of the execution, the domain name of the load balancer will be displayed. You can use this domain name to validate the nginx web server	
 
@@ -45,4 +49,4 @@ aws_secret_access_key = XXXXXXXXXXXXXXXXXXXXXXXXXXX
 	- aws_iam_instance_profile x 1
 	- aws_iam_role_policy x 1
 	
-- Screen captured taken during my implementation are included inside the folder called 'screen-shots'	
+- Screen captured taken during my implementation are included inside the folder called 'screenshots'	
